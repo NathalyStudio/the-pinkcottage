@@ -1,0 +1,39 @@
+<div class="fcd-custom-badges">
+{% render 'fcd-custom-badge', 
+  product: closest.product, 
+  tag_search: block.settings.tag_search, 
+  badge_text_default: block.settings.tag, 
+  show_tag_text: block.settings.show_tag_text 
+%}
+</div>
+{% schema %}
+{
+  "name": "FCD Custom Tag",
+  "tag": null,
+  "settings": [
+    {
+      "type": "text",
+      "id": "tag_search",
+      "label": "Search if the product tags conatains"
+    },
+    {
+      "type": "text",
+      "id": "tag",
+      "label": "Badge Text",
+      "default": "Final Sale"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_tag",
+      "label": "Show Tag Text",
+      "default": false
+    }
+  ],
+  "presets": [
+    {
+      "name": "FCD Custom Badges by Tag",
+      "category": "Product"
+    }
+  ]
+}
+{% endschema %}

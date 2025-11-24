@@ -1,0 +1,17 @@
+.badge--fcd-custom-tag {
+  background: #fdf0e6;
+  color: #2ca8a2;
+  font-weight: bold;
+  line-height: 1;
+  padding: 0.25rem 0.5rem;
+}
+.cart-items__details .badge--fcd-custom-tag {
+  padding: 0.25rem 0;
+  background: none;
+  color: rgba(223,19,133);
+}
+.fcd-custom-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}

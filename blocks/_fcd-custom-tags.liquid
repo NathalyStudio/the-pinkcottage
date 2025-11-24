@@ -1,0 +1,23 @@
+{% liquid
+  assign product = closest.product
+  if product.tags contains 'badge:::finale-sale'
+    assign is_finale_sale = true
+  endif
+%}
+
+{% if is_finale_sale %}
+  <span class="badge badge--finale-sale">{{block.settings.tag | default: 'Finale Sale'}}</span>
+{% endif %}
+
+{% schema %}
+{
+  "name": "FCD Custom Tag",
+  "settings": [
+    {
+      "type": "text",
+      "id": "tag",
+      "label": "Tag"
+    }
+  ]
+}
+{% endschema %}

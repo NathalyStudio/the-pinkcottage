@@ -1,0 +1,276 @@
+{% comment %}
+  Section: new-drop.liquid
+  Purpose: Promo card + collection-fed product carousel (configurable columns & count)
+  Theme: Horizon-ready; supports theme color scheme or per-section color overrides
+{% endcomment %}
+
+<section id="new-drop-{{ section.id }}" class="new-drop"
+  style="
+    --nd-bg:{% if section.settings.use_theme_colors %}transparent{% else %}{{ section.settings.bg | default: '#ffffff' }}{% endif %};
+    --nd-card: {{ section.settings.card_bg | default: '#f6f6f6' }};
+    --nd-text: {{ section.settings.text_color | default: '#111111' }};
+    --nd-accent: {{ section.settings.accent_color | default: '#222222' }};
+    --nd-cols-desktop: {{ section.settings.columns_desktop | default: 3 }};
+    --nd-cols-tablet: {{ section.settings.columns_tablet | default: 2 }};
+    --nd-cols-mobile: {{ section.settings.columns_mobile | default: 1 }};
+  ">
+
+  {% if section.settings.use_theme_colors and section.settings.color_scheme != blank %}
+    <div class="color-{{ section.settings.color_scheme }} gradient">
+  {% endif %}
+
+  <div class="nd-container page-width">
+    <div class="nd-grid">
+      <!-- Promo Card -->
+      <div class="nd-promo">
+        {% if section.settings.promo_image != blank %}
+          {% assign img = section.settings.promo_image %}
+          <div class="nd-promo-media">
+            <img
+              srcset="{{ img | image_url: width: 300 }} 300w, {{ img | image_url: width: 600 }} 600w, {{ img | image_url: width: 900 }} 900w, {{ img | image_url: width: 1200 }} 1200w"
+              sizes="(max-width: 989px) 100vw, 360px"
+              src="{{ img | image_url: width: 900 }}"
+              alt="{{ section.settings.heading | escape }}"
+              loading="lazy"
+              class="nd-promo-img" />
+          </div>
+        {% endif %}
+        <div class="nd-promo-body">
+          {% if section.settings.kicker != blank %}
+            <p class="nd-kicker">{{ section.settings.kicker }}</p>
+          {% endif %}
+          {% if section.settings.heading != blank %}
+            <h2 class="nd-heading">{{ section.settings.heading }}</h2>
+          {% endif %}
+          {% if section.settings.button_label != blank and section.settings.button_link != blank %}
+            {% if section.settings.use_theme_button %}
+              <a class="button button--primary" href="{{ section.settings.button_link }}">{{ section.settings.button_label }}</a>
+            {% else %}
+              <a class="nd-button" href="{{ section.settings.button_link }}">{{ section.settings.button_label }}</a>
+            {% endif %}
+          {% endif %}
+        </div>
+      </div>
+
+      <!-- Collection Carousel -->
+      <div class="nd-products">
+        {% assign the_collection = collections[section.settings.collection] %}
+        {% if the_collection and the_collection.products_count > 0 %}
+          {% assign limit = section.settings.product_limit | default: 6 %}
+          <div class="nd-carousel" data-section-id="{{ section.id }}">
+            {% if section.settings.enable_arrows %}
+              <button class="nd-arrow nd-arrow--prev" type="button" aria-label="Previous" data-dir="-1">&#10094;</button>
+            {% endif %}
+
+            <ul class="nd-track" role="list" aria-label="{{ the_collection.title }}">
+              {% for product in the_collection.products limit: limit %}
+                <li class="nd-slide">
+                  <a href="{{ product.url }}" class="nd-card-link">
+                    <div class="nd-media">
+                      {% if product.featured_image %}
+                        <img
+                          srcset="{{ product.featured_image | image_url: width: 300 }} 300w, {{ product.featured_image | image_url: width: 600 }} 600w, {{ product.featured_image | image_url: width: 900 }} 900w, {{ product.featured_image | image_url: width: 1200 }} 1200w"
+                          sizes="(max-width: 599px) calc(100vw - 48px), (max-width: 989px) 50vw, 33vw"
+                          src="{{ product.featured_image | image_url: width: 900 }}"
+                          alt="{{ product.featured_image.alt | default: product.title | escape }}"
+                          loading="lazy"
+                          class="nd-img" />
+                      {% else %}
+                        <div class="nd-img nd-img--placeholder">{{ 'product-1' | placeholder_svg_tag }}</div>
+                      {% endif %}
+                    </div>
+                    <div class="nd-info">
+                      <h3 class="nd-title">{{ product.title }}</h3>
+                      {% if section.settings.show_prices %}
+                        <span class="nd-price">{% render 'price', product: product %}</span>
+                      {% endif %}
+                    </div>
+                  </a>
+                </li>
+              {% endfor %}
+            </ul>
+
+            {% if section.settings.enable_arrows %}
+              <button class="nd-arrow nd-arrow--next" type="button" aria-label="Next" data-dir="1">&#10095;</button>
+            {% endif %}
+
+            {% if section.settings.enable_dots %}
+              <div class="nd-dots" aria-hidden="true"></div>
+            {% endif %}
+          </div>
+
+          {% if section.settings.view_all_label != blank and section.settings.view_all_link != blank %}
+            <div class="nd-view-all">
+              <a href="{{ section.settings.view_all_link }}" class="link underlined-link">{{ section.settings.view_all_label }}</a>
+            </div>
+          {% endif %}
+        {% else %}
+          <div class="nd-empty"><em>Select a collection with products.</em></div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+  {% if section.settings.use_theme_colors and section.settings.color_scheme != blank %}
+    </div>
+  {% endif %}
+
+  {% if section.settings.show_divider %}
+    <div class="nd-divider" aria-hidden="true">
+      <svg viewBox="0 0 1200 120" preserveAspectRatio="none" focusable="false">
+        <path d="M0,0V46.29c47.79,22.2,103.59,29,158,17C255.56,44.88,307.81,0,380,0s124.44,44.88,222,63c90.72,16.57,152.33-6.39,197-22,86.17-30.67,164.46-32.77,401,25V0Z"/>
+      </svg>
+    </div>
+  {% endif %}
+
+  <style>
+    #new-drop-{{ section.id }}{background:var(--nd-bg);color:var(--nd-text)}
+    #new-drop-{{ section.id }} .nd-container{padding-top:{{ section.settings.pad_top }}px;padding-bottom:{{ section.settings.pad_bottom }}px}
+    #new-drop-{{ section.id }} .nd-grid{display:grid;grid-template-columns: 1fr 2fr;gap:32px;align-items:stretch}
+
+    /* Promo card */
+    #new-drop-{{ section.id }} .nd-promo{background:var(--nd-card);border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
+    #new-drop-{{ section.id }} .nd-promo-media{aspect-ratio: 3/4;position:relative}
+    #new-drop-{{ section.id }} .nd-promo-img{width:100%;height:100%;object-fit:cover;display:block}
+    #new-drop-{{ section.id }} .nd-promo-body{padding:24px}
+    #new-drop-{{ section.id }} .nd-kicker{font-size:12px;letter-spacing:.08em;text-transform:uppercase;margin:0 0 8px;opacity:.8}
+    #new-drop-{{ section.id }} .nd-heading{font-size:28px;line-height:1.15;margin:0 0 16px}
+    #new-drop-{{ section.id }} .nd-button{display:inline-block;background:var(--nd-accent);color:#fff;padding:12px 18px;border-radius:999px;text-decoration:none}
+
+    /* Carousel */
+    #new-drop-{{ section.id }} .nd-carousel{position:relative}
+    #new-drop-{{ section.id }} .nd-track{list-style:none;margin:0;padding:0;display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch}
+    #new-drop-{{ section.id }} .nd-track::-webkit-scrollbar{display:none}
+    #new-drop-{{ section.id }} .nd-slide{scroll-snap-align:start;flex:0 0 calc(100%/var(--nd-cols-desktop) - (16px - 16px/var(--nd-cols-desktop)));background:#fff;border-radius:16px;overflow:hidden}
+    #new-drop-{{ section.id }} .nd-card-link{display:flex;flex-direction:column;height:100%;color:inherit;text-decoration:none}
+    #new-drop-{{ section.id }} .nd-media{aspect-ratio: 3/4;background:#fafafa}
+    #new-drop-{{ section.id }} .nd-img{width:100%;height:100%;object-fit:cover;display:block}
+    #new-drop-{{ section.id }} .nd-info{padding:16px}
+    #new-drop-{{ section.id }} .nd-title{font-size:16px;margin:0 0 6px;line-height:1.3}
+    #new-drop-{{ section.id }} .nd-price{font-size:14px;opacity:.9}
+
+    #new-drop-{{ section.id }} .nd-arrow{position:absolute;top:45%;transform:translateY(-50%);z-index:2;border:none;background:rgba(0,0,0,.6);color:#fff;border-radius:999px;width:40px;height:40px;cursor:pointer}
+    #new-drop-{{ section.id }} .nd-arrow--prev{left:-8px}
+    #new-drop-{{ section.id }} .nd-arrow--next{right:-8px}
+
+    #new-drop-{{ section.id }} .nd-dots{display:flex;gap:8px;justify-content:center;margin-top:12px}
+    #new-drop-{{ section.id }} .nd-dots button{width:6px;height:6px;border-radius:999px;border:none;background:rgba(0,0,0,.25)}
+    #new-drop-{{ section.id }} .nd-dots button[aria-current="true"]{background:rgba(0,0,0,.7)}
+
+    #new-drop-{{ section.id }} .nd-view-all{margin-top:12px}
+
+    /* Tablet */
+    @media (max-width: 989px){
+      #new-drop-{{ section.id }} .nd-container{padding-top:{{ section.settings.pad_top | divided_by: 1.5 | round }}px;padding-bottom:{{ section.settings.pad_bottom | divided_by: 1.5 | round }}px}
+      #new-drop-{{ section.id }} .nd-grid{grid-template-columns:1fr;gap:16px}
+      #new-drop-{{ section.id }} .nd-slide{flex-basis: calc(100%/var(--nd-cols-tablet) - (16px - 16px/var(--nd-cols-tablet)))}
+      #new-drop-{{ section.id }} .nd-heading{font-size:24px}
+      #new-drop-{{ section.id }} .nd-kicker{font-size:11px}
+    }
+
+    /* Mobile */
+    @media (max-width: 599px){
+      #new-drop-{{ section.id }} .nd-slide{flex-basis: calc(100%/var(--nd-cols-mobile) - (16px - 16px/var(--nd-cols-mobile)))}
+      #new-drop-{{ section.id }} .nd-media{aspect-ratio: 4/5}
+      #new-drop-{{ section.id }} .nd-heading{font-size:22px}
+      #new-drop-{{ section.id }} .nd-title{font-size:15px}
+      #new-drop-{{ section.id }} .nd-price{font-size:13px}
+      #new-drop-{{ section.id }} .nd-promo-body{padding:16px}
+      #new-drop-{{ section.id }} .nd-button{width:100%;text-align:center;min-height:44px}
+      #new-drop-{{ section.id }} .nd-divider{display:none}
+      #new-drop-{{ section.id }} .nd-arrow{display:none} /* swipe on touch */
+    }
+  </style>
+
+  <script>
+    (function(){
+      var root = document.getElementById('new-drop-{{ section.id }}');
+      if(!root) return;
+      var carousel = root.querySelector('.nd-carousel');
+      if(!carousel) return;
+      var track = carousel.querySelector('.nd-track');
+      var prev = carousel.querySelector('.nd-arrow--prev');
+      var next = carousel.querySelector('.nd-arrow--next');
+      var dotsWrap = carousel.querySelector('.nd-dots');
+
+      function pageSize(){
+        var slide = track.querySelector('.nd-slide');
+        return slide ? (slide.getBoundingClientRect().width + 16) : track.clientWidth; // 16 = gap
+      }
+      function go(dir){ track.scrollBy({left: dir * pageSize(), behavior: 'smooth'}); }
+
+      if(prev) prev.addEventListener('click', function(){ go(-1); });
+      if(next) next.addEventListener('click', function(){ go(1); });
+
+      if(dotsWrap){
+        var slides = track.querySelectorAll('.nd-slide');
+        var cols = parseInt(getComputedStyle(root).getPropertyValue('--nd-cols-desktop')) || 3;
+        var dotsCount = Math.max(1, Math.ceil(slides.length / cols));
+        for(var i=0;i<dotsCount;i++){
+          var b=document.createElement('button');
+          if(i===0) b.setAttribute('aria-current','true');
+          (function(idx){
+            b.addEventListener('click', function(){ track.scrollTo({left: idx*pageSize(), behavior: 'smooth'}); });
+          })(i);
+          dotsWrap.appendChild(b);
+        }
+        function updateDots(){
+          var idx = Math.round(track.scrollLeft / pageSize());
+          var ds = dotsWrap.querySelectorAll('button');
+          for(var j=0;j<ds.length;j++){
+            if(j===idx){ ds[j].setAttribute('aria-current','true'); } else { ds[j].removeAttribute('aria-current'); }
+          }
+        }
+        track.addEventListener('scroll', function(){ window.requestAnimationFrame(updateDots); });
+      }
+    })();
+  </script>
+</section>
+
+{% schema %}
+{
+  "name": "New Drop Collection",
+  "tag": "section",
+  "class": "section new-drop-section",
+  "settings": [
+    { "type": "text", "id": "kicker", "label": "Kicker", "default": "Fall 2025" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "New Drop" },
+    { "type": "image_picker", "id": "promo_image", "label": "Promo image" },
+
+    { "type": "url", "id": "button_link", "label": "Button link" },
+    { "type": "text", "id": "button_label", "label": "Button label", "default": "Discover more" },
+    { "type": "checkbox", "id": "use_theme_button", "label": "Use theme button style", "default": true },
+
+    { "type": "checkbox", "id": "show_divider", "label": "Show wave divider", "default": false },
+
+    { "type": "collection", "id": "collection", "label": "Collection" },
+    { "type": "range", "id": "product_limit", "min": 2, "max": 12, "step": 1, "label": "Product count", "default": 6 },
+
+    { "type": "range", "id": "columns_desktop", "min": 2, "max": 5, "step": 1, "label": "Columns on desktop", "default": 3 },
+    { "type": "range", "id": "columns_tablet", "min": 2, "max": 4, "step": 1, "label": "Columns on tablet", "default": 2 },
+    { "type": "select", "id": "columns_mobile", "label": "Columns on mobile", "options": [ { "value": "1", "label": "1" }, { "value": "2", "label": "2" } ], "default": "1" },
+
+    { "type": "checkbox", "id": "enable_arrows", "label": "Show arrows (desktop)", "default": true },
+    { "type": "checkbox", "id": "enable_dots", "label": "Show pagination dots", "default": false },
+    { "type": "checkbox", "id": "show_prices", "label": "Show prices", "default": true },
+
+    { "type": "text", "id": "view_all_label", "label": "View all label", "default": "View all" },
+    { "type": "url", "id": "view_all_link", "label": "View all link" },
+
+    { "type": "checkbox", "id": "use_theme_colors", "label": "Use theme color scheme", "default": false },
+    { "type": "color_scheme", "id": "color_scheme", "label": "Color scheme" },
+
+    { "type": "color", "id": "bg", "label": "Background color", "default": "#ffffff" },
+    { "type": "color", "id": "card_bg", "label": "Promo card background", "default": "#f6f3ef" },
+    { "type": "color", "id": "text_color", "label": "Text color", "default": "#111111" },
+    { "type": "color", "id": "accent_color", "label": "Button color", "default": "#111111" },
+
+    { "type": "range", "id": "pad_top", "min": 0, "max": 120, "step": 4, "unit": "px", "label": "Padding top", "default": 32 },
+    { "type": "range", "id": "pad_bottom", "min": 0, "max": 120, "step": 4, "unit": "px", "label": "Padding bottom", "default": 32 }
+  ],
+  "blocks": [],
+  "presets": [
+    { "name": "New Drop Promo + Collection (Carousel)", "category": "Products" }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,24 @@
+{% liquid
+  assign product = product | default: closest.product
+  assign tag_search = tag_search | default: block.settings.tag_search
+  assign badge_text_default = badge_text_default | default: block.settings.tag | default: 'Final Sale'
+  assign show_tag_text = show_tag_text | default: block.settings.show_tag_text | default: false
+  
+  assign show_tag = false
+  assign badge_text = badge_text_default
+  
+  if tag_search != blank and product != blank
+    for tag in product.tags
+      if tag contains tag_search
+        assign show_tag = true
+        if show_tag_text
+          assign badge_text = tag
+        endif
+      endif
+    endfor
+  endif
+%}
+
+{% if show_tag and tag_search != blank %}
+  <span class="badge badge--fcd-custom-tag">{{badge_text}}</span>
+{% endif %}
