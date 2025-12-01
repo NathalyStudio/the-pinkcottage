@@ -41,7 +41,7 @@
       results_size: collection.products_count
     %}
 
-    {% paginate collection.products by 250 %}
+    {% paginate collection.products by 24 %}
       {% capture children %}
         {% for product in collection.products %}
           <li
