@@ -83,7 +83,7 @@
               "name": "t:names.button",
               "settings": {
                 "label": "Shop Now",
-                "link": "shopify://collections/disney-resort-2025",
+                "link": "shopify://collections/delivery-4",
                 "open_in_new_tab": false,
                 "style_class": "button-secondary",
                 "width": "fit-content",
