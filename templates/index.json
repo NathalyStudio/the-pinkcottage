@@ -43,7 +43,7 @@
             "border_radius": 10,
             "placeholder": "",
             "toggle_overlay": true,
-            "overlay_color": "#e71842cc",
+            "overlay_color": "#00000003",
             "overlay_style": "solid",
             "gradient_direction": "to top",
             "padding-block-start": 10,
@@ -56,7 +56,7 @@
               "type": "text",
               "name": "t:names.heading",
               "settings": {
-                "text": "<p>Lilly Sunshine Sale</p>",
+                "text": "",
                 "width": "fit-content",
                 "max_width": "narrow",
                 "alignment": "left",
