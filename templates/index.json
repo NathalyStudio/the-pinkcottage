@@ -56,7 +56,7 @@
               "type": "text",
               "name": "t:names.heading",
               "settings": {
-                "text": "<p>The Lilly Sunshine Sale</p>",
+                "text": "<p>A sunny surprise for you...</p>",
                 "width": "fit-content",
                 "max_width": "narrow",
                 "alignment": "left",
@@ -82,7 +82,7 @@
               "type": "text",
               "name": "t:names.heading",
               "settings": {
-                "text": "<p>Up to 70% Off</p>",
+                "text": "<p>$50 Off a $200+ Order</p>",
                 "width": "fit-content",
                 "max_width": "narrow",
                 "alignment": "left",
@@ -108,7 +108,7 @@
               "type": "text",
               "name": "t:names.heading",
               "settings": {
-                "text": "<p>January 5-7 | Final Sale</p>",
+                "text": "<p>Now unitl January 11th</p>",
                 "width": "fit-content",
                 "max_width": "narrow",
                 "alignment": "left",
@@ -135,7 +135,7 @@
               "name": "t:names.button",
               "settings": {
                 "label": "Shop Now",
-                "link": "shopify://collections/summer-sunshine-sale-2025",
+                "link": "shopify://collections/bounceback-sale",
                 "open_in_new_tab": false,
                 "style_class": "button",
                 "width": "fit-content",
