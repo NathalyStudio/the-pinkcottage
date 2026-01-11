@@ -135,7 +135,7 @@
               "name": "t:names.button",
               "settings": {
                 "label": "Shop Now",
-                "link": "",
+                "link": "shopify://collections/delivery-5",
                 "open_in_new_tab": false,
                 "style_class": "button",
                 "width": "fit-content",
