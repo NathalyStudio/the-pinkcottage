@@ -56,7 +56,7 @@
               "type": "text",
               "name": "t:names.heading",
               "settings": {
-                "text": "<p>A sunny surprise for you...</p>",
+                "text": "",
                 "width": "fit-content",
                 "max_width": "narrow",
                 "alignment": "left",
@@ -82,7 +82,7 @@
               "type": "text",
               "name": "t:names.heading",
               "settings": {
-                "text": "<p>$50 Off a $200+ Order</p>",
+                "text": "",
                 "width": "fit-content",
                 "max_width": "narrow",
                 "alignment": "left",
@@ -108,7 +108,7 @@
               "type": "text",
               "name": "t:names.heading",
               "settings": {
-                "text": "<p>Now unitl January 11th</p>",
+                "text": "",
                 "width": "fit-content",
                 "max_width": "narrow",
                 "alignment": "left",
@@ -135,7 +135,7 @@
               "name": "t:names.button",
               "settings": {
                 "label": "Shop Now",
-                "link": "shopify://collections/bounceback-sale",
+                "link": "",
                 "open_in_new_tab": false,
                 "style_class": "button",
                 "width": "fit-content",
@@ -160,8 +160,9 @@
       "name": "t:names.hero",
       "settings": {
         "media_type_1": "image",
-        "image_1": "shopify://shop_images/sunshine_hero3.png",
+        "image_1": "shopify://shop_images/R25_D5_CP_014614_2043VM_FrenchRoastBoxOfChocolates_copy.jpg",
         "media_type_2": "image",
+        "image_2": "shopify://shop_images/R25_D5_CP_015507_1243U9_CoconutSpicySocialiteEngineered_SadieShiftRomper_1_copy.jpg",
         "link": "",
         "open_in_new_tab": false,
         "content_direction": "column",
