@@ -133,6 +133,9 @@
         "text_yE93RC",
         "button_93dnGU"
       ],
+      "custom_css": [
+        ".custom-section-content {max-width: 700px; margin: auto;}"
+      ],
       "name": "t:names.rich_text_section",
       "settings": {
         "content_direction": "column",
