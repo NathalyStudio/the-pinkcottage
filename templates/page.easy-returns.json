@@ -86,6 +86,21 @@
           },
           "blocks": {}
         },
+        "button_93dnGU": {
+          "type": "button",
+          "name": "t:names.button",
+          "settings": {
+            "label": "Start Return",
+            "link": "https://lillyspinkcottage.com/apps/redo/returns-portal",
+            "open_in_new_tab": false,
+            "style_class": "button",
+            "width": "fit-content",
+            "custom_width": 100,
+            "width_mobile": "fit-content",
+            "custom_width_mobile": 100
+          },
+          "blocks": {}
+        },
         "text_yE93RC": {
           "type": "text",
           "name": "t:names.text",
@@ -111,27 +126,12 @@
             "padding-inline-end": 0
           },
           "blocks": {}
-        },
-        "button_93dnGU": {
-          "type": "button",
-          "name": "t:names.button",
-          "settings": {
-            "label": "Start Return",
-            "link": "https://lillyspinkcottage.com/apps/redo/returns-portal",
-            "open_in_new_tab": false,
-            "style_class": "button",
-            "width": "fit-content",
-            "custom_width": 100,
-            "width_mobile": "fit-content",
-            "custom_width_mobile": 100
-          },
-          "blocks": {}
         }
       },
       "block_order": [
         "text_HnEc3R",
-        "text_yE93RC",
-        "button_93dnGU"
+        "button_93dnGU",
+        "text_yE93RC"
       ],
       "custom_css": [
         ".custom-section-content {max-width: 700px; margin: auto;}"
