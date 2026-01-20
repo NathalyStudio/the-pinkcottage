@@ -165,15 +165,7 @@
       "name": "t:names.collections_bento",
       "settings": {
         "collection_list": [
-          "onyx-pb-anniversary",
-          "multi-glowing-gardens",
-          "conch-shell-pink-sunny-dee",
-          "conch-shell-pink-1",
-          "bright-delight-patch-1",
-          "martinique-blue-x-blue-med-copy",
-          "low-tide-navy-florrie-golf",
-          "resort-white-dee-lightful",
-          "multy-sunny-dee-patch-engineered-woven-maxi-shift"
+          "coconut-dear-heart"
         ],
         "layout_type": "grid",
         "carousel_on_mobile": false,
