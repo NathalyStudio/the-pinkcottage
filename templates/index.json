@@ -395,7 +395,7 @@
               "type": "_product-list-text",
               "name": "t:names.collection_title",
               "settings": {
-                "text": "<p>Lilly Valentine's Day </p>",
+                "text": "<p>Lilly Spring  Delivery 1</p>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -544,7 +544,7 @@
       },
       "name": "t:names.products_carousel",
       "settings": {
-        "collection": "delivery-5",
+        "collection": "spring-2026",
         "layout_type": "carousel",
         "carousel_on_mobile": false,
         "max_products": 6,
