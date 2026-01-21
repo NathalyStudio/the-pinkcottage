@@ -1293,10 +1293,9 @@
       "name": "t:names.collections_carousel",
       "settings": {
         "collection_list": [
-          "dresses1",
+          "swim",
+          "dresses",
           "matching-mommy-and-me-outfits",
-          "womens-tops-collection",
-          "cocktail-party-dresses",
           "jewelry",
           "womens-activewear-loungewear"
         ],
