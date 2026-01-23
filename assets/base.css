@@ -2463,6 +2463,9 @@ product-price.text-block:is(.h1, .h2, .h3, .h4, .h5, .h6) > *:not(.tax-note) {
     text-align: left !important;
     margin-bottom: 2rem;
 }
+.shopify-policy__body p {
+    margin: .25rem 0;
+}
 .checkbox {
   --checkbox-size: 22px;
   --checkbox-top: 50%;
