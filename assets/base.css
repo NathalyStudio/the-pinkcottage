@@ -4279,3 +4279,6 @@ text-component {
     font-size: max(1rem, 100%);
   }
 }
+.shopify-policy__title h1 {
+    text-transform: capitalize;
+}
