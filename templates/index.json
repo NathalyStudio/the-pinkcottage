@@ -605,7 +605,7 @@
               "type": "_product-list-text",
               "name": "t:names.collection_title",
               "settings": {
-                "text": "<p>Lilly Spring  Delivery 1</p>",
+                "text": "<p>Lilly Spring  Delivery 2</p>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
