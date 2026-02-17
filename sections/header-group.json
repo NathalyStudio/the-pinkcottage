@@ -32,7 +32,7 @@
           "type": "_announcement",
           "name": "GWP",
           "settings": {
-            "text": "<strong>2/12-2/16 - Check Into Spring GWP:</strong> $175 spend pool pouch set & $450 spend pool tote and towel",
+            "text": "",
             "link": "",
             "font": "var(--font-body--family)",
             "font_size": "0.875rem",
