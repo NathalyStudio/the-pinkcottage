@@ -377,7 +377,7 @@
       },
       "name": "t:names.products_carousel",
       "settings": {
-        "collection": "lilly-spring-disney-2026",
+        "collection": "lilly-spring-delivery-4",
         "layout_type": "carousel",
         "carousel_on_mobile": false,
         "max_products": 6,
