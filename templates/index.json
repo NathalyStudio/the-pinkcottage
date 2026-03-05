@@ -228,7 +228,7 @@
               "type": "_product-list-text",
               "name": "t:names.collection_title",
               "settings": {
-                "text": "<p>Lilly Spring  Delivery 4</p>",
+                "text": "<p>Lilly Spring  Delivery 3</p>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -377,7 +377,7 @@
       },
       "name": "t:names.products_carousel",
       "settings": {
-        "collection": "lilly-spring-delivery-4",
+        "collection": "lilly-spring-delivery-3",
         "layout_type": "carousel",
         "carousel_on_mobile": false,
         "max_products": 6,
