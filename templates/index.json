@@ -135,7 +135,7 @@
               "name": "t:names.button",
               "settings": {
                 "label": "Shop Now",
-                "link": "shopify://collections/lilly-spring-delivery-3",
+                "link": "shopify://collections/lilly-spring-delivery-4",
                 "open_in_new_tab": false,
                 "style_class": "button",
                 "width": "fit-content",
@@ -160,9 +160,9 @@
       "name": "t:names.hero",
       "settings": {
         "media_type_1": "image",
-        "image_1": "shopify://shop_images/S26_D3_CP_019774_46065_BERNICEMAXIDRESS_MULTIPOPPYPARTYENGINEEREDWOVENMAXIDRESS_4265.jpg",
+        "image_1": "shopify://shop_images/S26_D4_CP_019933_46086_DAVISMAXIDRESS_CAPRIBLUE_6705.jpg",
         "media_type_2": "image",
-        "image_2": "shopify://shop_images/S26_D3_CP_014800_46065_ANNETHIGHRISECROPFLAR_CONCHSHELLPINKSUNNYDAISIES_3699.jpg",
+        "image_2": "shopify://shop_images/S26_D4_CP_021009_46086_JOURILACEDRESS_PUTTINGGREENSUNSHINETILELACE_5771.jpg",
         "link": "",
         "open_in_new_tab": false,
         "content_direction": "column",
