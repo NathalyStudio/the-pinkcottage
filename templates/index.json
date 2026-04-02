@@ -228,7 +228,7 @@
               "type": "_product-list-text",
               "name": "t:names.collection_title",
               "settings": {
-                "text": "<p>Lilly Spring  Delivery 4</p>",
+                "text": "<p>Lilly Home &Pet</p>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
