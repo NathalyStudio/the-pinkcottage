@@ -135,8 +135,8 @@
               "name": "t:names.button",
               "settings": {
                 "label": "Shop Now",
-                "link": "shopify://collections/lilly-spring-delivery-6",
-                "open_in_new_tab": false,
+                "link": "shopify://collections/lilly-spring-delivery-7",
+                "open_in_new_tab": true,
                 "style_class": "button",
                 "width": "fit-content",
                 "custom_width": 100,
