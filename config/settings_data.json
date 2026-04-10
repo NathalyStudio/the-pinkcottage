@@ -190,6 +190,11 @@
         "type": "shopify://apps/kiwi-final-sale-discounts/blocks/product/19284dba-1dab-4301-8069-0e7e3f07a7ab",
         "disabled": false,
         "settings": {}
+      },
+      "534977871531306417": {
+        "type": "shopify://apps/tnc-terms-checkbox/blocks/app-embed/2b45c8fb-5ee2-4392-8a72-b663da1d38ad",
+        "disabled": false,
+        "settings": {}
       }
     },
     "color_schemes": {
