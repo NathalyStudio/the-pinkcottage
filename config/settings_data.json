@@ -170,6 +170,26 @@
         "type": "shopify://apps/back-in-stock-restock-alerts/blocks/main/4bb73be2-b7c2-4870-949f-c528145452a3",
         "disabled": false,
         "settings": {}
+      },
+      "6433501379952681980": {
+        "type": "shopify://apps/kiwi-final-sale-discounts/blocks/cart-drawer/19284dba-1dab-4301-8069-0e7e3f07a7ab",
+        "disabled": false,
+        "settings": {}
+      },
+      "1616821049543856644": {
+        "type": "shopify://apps/kiwi-final-sale-discounts/blocks/cart-notification/19284dba-1dab-4301-8069-0e7e3f07a7ab",
+        "disabled": false,
+        "settings": {}
+      },
+      "9000865267337366020": {
+        "type": "shopify://apps/kiwi-final-sale-discounts/blocks/cart/19284dba-1dab-4301-8069-0e7e3f07a7ab",
+        "disabled": false,
+        "settings": {}
+      },
+      "4892622242224891121": {
+        "type": "shopify://apps/kiwi-final-sale-discounts/blocks/product/19284dba-1dab-4301-8069-0e7e3f07a7ab",
+        "disabled": false,
+        "settings": {}
       }
     },
     "color_schemes": {
