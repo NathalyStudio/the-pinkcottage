@@ -32,7 +32,7 @@
           "type": "_announcement",
           "name": "GWP",
           "settings": {
-            "text": "<strong>4.23-4.26 Mum's The Word GWP:</strong> $250 spend GWP pouch, $500 spend GWP terry robe.",
+            "text": "",
             "link": "",
             "font": "var(--font-body--family)",
             "font_size": "0.875rem",
