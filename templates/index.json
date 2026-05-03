@@ -135,7 +135,7 @@
               "name": "t:names.button",
               "settings": {
                 "label": "Shop Now",
-                "link": "shopify://collections/accessories",
+                "link": "shopify://collections/lilly-summer-delivery-1",
                 "open_in_new_tab": true,
                 "style_class": "button",
                 "width": "fit-content",
