@@ -228,7 +228,7 @@
               "type": "_product-list-text",
               "name": "t:names.collection_title",
               "settings": {
-                "text": "<p>Lilly Home &Pet</p>",
+                "text": "<p><a href=\"https://www.jooraccess.com/collections/view/1086976?brandId=94655\" target=\"_blank\">Lilly Pulitzer x Janie & Jack</a></p>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
