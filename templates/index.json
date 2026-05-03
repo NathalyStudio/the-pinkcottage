@@ -228,7 +228,7 @@
               "type": "_product-list-text",
               "name": "t:names.collection_title",
               "settings": {
-                "text": "<p><a href=\"https://www.jooraccess.com/collections/view/1086976?brandId=94655\" target=\"_blank\">Lilly Pulitzer x Janie & Jack</a></p>",
+                "text": "<p>Lilly Pulitzer x Janie & Jack</p>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
