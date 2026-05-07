@@ -171,28 +171,13 @@
         "disabled": false,
         "settings": {}
       },
-      "6433501379952681980": {
-        "type": "shopify://apps/kiwi-final-sale-discounts/blocks/cart-drawer/19284dba-1dab-4301-8069-0e7e3f07a7ab",
-        "disabled": false,
-        "settings": {}
-      },
-      "1616821049543856644": {
-        "type": "shopify://apps/kiwi-final-sale-discounts/blocks/cart-notification/19284dba-1dab-4301-8069-0e7e3f07a7ab",
-        "disabled": false,
-        "settings": {}
-      },
-      "9000865267337366020": {
-        "type": "shopify://apps/kiwi-final-sale-discounts/blocks/cart/19284dba-1dab-4301-8069-0e7e3f07a7ab",
-        "disabled": false,
-        "settings": {}
-      },
-      "4892622242224891121": {
-        "type": "shopify://apps/kiwi-final-sale-discounts/blocks/product/19284dba-1dab-4301-8069-0e7e3f07a7ab",
-        "disabled": false,
-        "settings": {}
-      },
       "534977871531306417": {
         "type": "shopify://apps/tnc-terms-checkbox/blocks/app-embed/2b45c8fb-5ee2-4392-8a72-b663da1d38ad",
+        "disabled": false,
+        "settings": {}
+      },
+      "2567389343055140935": {
+        "type": "shopify://apps/microsoft-clarity/blocks/clarity_js/31c3d126-8116-4b4a-8ba1-baeda7c4aeea",
         "disabled": false,
         "settings": {}
       }
