@@ -228,7 +228,7 @@
               "type": "_product-list-text",
               "name": "t:names.collection_title",
               "settings": {
-                "text": "<p>Lilly Pulitzer x Janie & Jack</p>",
+                "text": "<p>Lilly Summer Delivery 1</p>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -377,7 +377,7 @@
       },
       "name": "t:names.products_carousel",
       "settings": {
-        "collection": "lilly-pulitzer-x-janie-jack",
+        "collection": "lilly-summer-delivery-1",
         "layout_type": "carousel",
         "carousel_on_mobile": false,
         "max_products": 6,
@@ -963,7 +963,7 @@
       },
       "name": "t:names.products_carousel",
       "settings": {
-        "collection": "lilly-spring-delivery-5",
+        "collection": "kendra-scott",
         "layout_type": "carousel",
         "carousel_on_mobile": false,
         "max_products": 6,
@@ -1029,7 +1029,7 @@
               "type": "text",
               "name": "t:names.text",
               "settings": {
-                "text": "<h3>Shop by collection</h3>",
+                "text": "<h3>Shop By Collection</h3>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
