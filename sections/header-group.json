@@ -32,7 +32,7 @@
           "type": "_announcement",
           "name": "GWP",
           "settings": {
-            "text": "",
+            "text": "<strong>Star Spangled Style GWP 6.11-6.18.</strong>",
             "link": "",
             "font": "var(--font-body--family)",
             "font_size": "0.875rem",
