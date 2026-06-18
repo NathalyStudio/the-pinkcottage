@@ -228,7 +228,7 @@
               "type": "_product-list-text",
               "name": "t:names.collection_title",
               "settings": {
-                "text": "<p>LILLY Summer Delivery 1</p>",
+                "text": "<p>LILLY Summer Delivery 4</p>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -377,7 +377,7 @@
       },
       "name": "t:names.products_carousel",
       "settings": {
-        "collection": "lilly-summer-delivery-1",
+        "collection": "lilly-summer-delivery-4",
         "layout_type": "carousel",
         "carousel_on_mobile": false,
         "max_products": 6,
