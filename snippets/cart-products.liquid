@@ -97,6 +97,10 @@
 
           <tbody role="rowgroup">
             {% for item in cart.items %}
+              {%- assign is_gwp_item = false -%}
+              {%- if item.product.title contains 'GWP' and item.original_price == 0 -%}
+                {%- assign is_gwp_item = true -%}
+              {%- endif -%}
               <tr
                 role="row"
                 class="cart-items__table-row{% if item.parent_relationship.parent != null %} cart-items__nested-line{% endif %}"
@@ -255,31 +259,35 @@
                   headers="quantity"
                 >
                   {% # Here I want to pass some arguments to the quantity block so it knows which value should the input be set to. Though quantity block could be a snippet instead %}
-                  {% assign can_update_quantity = item.instructions.can_update_quantity
-                    | default: true, allow_false: true
-                  %}
-                  {% render 'quantity-selector',
-                    product: item.product,
-                    in_cart_quantity: item.quantity,
-                    line_index: item.index,
-                    min: 0,
-                    class: 'cart-primary-typography',
-                    can_update_quantity: can_update_quantity
-                  %}
+                  {% if is_gwp_item %}
+                    <span class="cart-primary-typography">{{ item.quantity }}</span>
+                  {% else %}
+                    {% assign can_update_quantity = item.instructions.can_update_quantity
+                      | default: true, allow_false: true
+                    %}
+                    {% render 'quantity-selector',
+                      product: item.product,
+                      in_cart_quantity: item.quantity,
+                      line_index: item.index,
+                      min: 0,
+                      class: 'cart-primary-typography',
+                      can_update_quantity: can_update_quantity
+                    %}
 
-                  <button
-                    class="button button--tertiary cart-items__remove"
-                    type="button"
-                    aria-label="{{ 'accessibility.remove_item' | t: title: item.title | escape }}"
-                    on:click="/onLineItemRemove/{{ item.index | plus: 1 }}"
-                    {% assign can_remove = item.instructions.can_remove | default: true, allow_false: true %}
-                    {% if can_remove == false %}
-                      hidden
-                    {% endif %}
-                  >
-                    {{- 'icon-delete.svg' | inline_asset_content -}}
-                    <span class="visually-hidden">Remove</span>
-                  </button>
+                    <button
+                      class="button button--tertiary cart-items__remove"
+                      type="button"
+                      aria-label="{{ 'accessibility.remove_item' | t: title: item.title | escape }}"
+                      on:click="/onLineItemRemove/{{ item.index | plus: 1 }}"
+                      {% assign can_remove = item.instructions.can_remove | default: true, allow_false: true %}
+                      {% if can_remove == false %}
+                        hidden
+                      {% endif %}
+                    >
+                      {{- 'icon-delete.svg' | inline_asset_content -}}
+                      <span class="visually-hidden">Remove</span>
+                    </button>
+                  {% endif %}
                 </td>
                 <td
                   class="cart-items__error hidden"

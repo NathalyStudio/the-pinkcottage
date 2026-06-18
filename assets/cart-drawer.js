@@ -17,8 +17,8 @@ class CartDrawerComponent extends DialogComponent {
     document.removeEventListener(CartAddEvent.eventName, this.#handleCartAdd);
   }
 
-  #handleCartAdd = () => {
-    if (this.hasAttribute('auto-open')) {
+  #handleCartAdd = (/** @type {CustomEvent} */ event) => {
+    if (this.hasAttribute('auto-open') && event.detail?.data?.source !== 'gwp-guard') {
       this.showDialog();
     }
   };

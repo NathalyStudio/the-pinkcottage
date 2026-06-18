@@ -58,6 +58,7 @@
   endif
 %}
 
+{% if product.title contains 'GWP' and product.price == 0 %}{% else %}
 <quick-add-component
   class="quick-add color-{{ settings.quick_add_color_scheme }} "
   ref="quickAdd"
@@ -130,6 +131,7 @@
     {%- endform -%}
   </product-form-component>
 </quick-add-component>
+{% endif %}
 
 {% stylesheet %}
   /* Quick Add */

@@ -260,7 +260,7 @@
               "block_order": []
             },
             "rise_ai_gift_cards_loyalty_rise_store_credit_banner_extension_XwmGET": {
-              "type": "shopify://apps/rise-ai-gift-cards-loyalty/blocks/rise-store-credit-banner-extension/d837f9d0-9f22-491a-94b6-f32b41864892",
+              "type": "shopify://apps/rise-gift-cards-store-credit/blocks/rise-store-credit-banner-extension/d837f9d0-9f22-491a-94b6-f32b41864892",
               "settings": {
                 "backgroundColor": "#ffffff",
                 "textColor": "#000000",
