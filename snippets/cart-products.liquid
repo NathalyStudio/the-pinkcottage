@@ -98,7 +98,8 @@
           <tbody role="rowgroup">
             {% for item in cart.items %}
               {%- assign is_gwp_item = false -%}
-              {%- if item.product.title contains 'GWP' and item.original_price == 0 -%}
+              {%- assign _gwp_title = item.product.title | downcase -%}
+              {%- if _gwp_title contains 'gwp' and item.original_price == 0 -%}
                 {%- assign is_gwp_item = true -%}
               {%- endif -%}
               <tr

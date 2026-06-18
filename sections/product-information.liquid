@@ -42,7 +42,8 @@
   {{ closest.product | structured_data }}
 </script>
 
-{% if product.title contains 'GWP' and product.price == 0 %}
+{% assign _gwp_title = product.title | downcase %}
+{% if _gwp_title contains 'gwp' and product.price == 0 %}
   <script>
     window.location.replace('/');
   </script>

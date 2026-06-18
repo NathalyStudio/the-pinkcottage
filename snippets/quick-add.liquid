@@ -58,7 +58,8 @@
   endif
 %}
 
-{% if product.title contains 'GWP' and product.price == 0 %}{% else %}
+{% assign _gwp_title = product.title | downcase %}
+{% if _gwp_title contains 'gwp' and product.price == 0 %}{% else %}
 <quick-add-component
   class="quick-add color-{{ settings.quick_add_color_scheme }} "
   ref="quickAdd"
