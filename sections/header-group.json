@@ -32,7 +32,7 @@
           "type": "_announcement",
           "name": "GWP",
           "settings": {
-            "text": "",
+            "text": "<strong>6.20.-6.23 Farm Stand Fresh GWP:</strong> $200 spend GWP set of 4 corn picks, $400 spend GWP farmer's market tote. ",
             "link": "",
             "font": "var(--font-body--family)",
             "font_size": "0.875rem",
