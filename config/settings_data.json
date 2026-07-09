@@ -190,7 +190,7 @@
         "type": "shopify://apps/checkbox-assistant/blocks/app-embed-v2/9b7b4dde-58cf-4cb6-92f3-71004fe968bb",
         "disabled": false,
         "settings": {
-          "text-color": "",
+          "text-color": "#2DAAA3",
           "checkbox-color": "",
           "font-size": 14,
           "margin-top": 16,
@@ -199,7 +199,7 @@
           "margin-right": 0,
           "checkbox-spacing": 12,
           "show-required-asterisk": true,
-          "required-asterisk-color": "#DC2626"
+          "required-asterisk-color": "#dc2626"
         }
       }
     },
