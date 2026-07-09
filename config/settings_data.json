@@ -180,6 +180,11 @@
         "type": "shopify://apps/microsoft-clarity/blocks/clarity_js/31c3d126-8116-4b4a-8ba1-baeda7c4aeea",
         "disabled": false,
         "settings": {}
+      },
+      "5061257265103808445": {
+        "type": "shopify://apps/r-terms-conditions/blocks/embed-block/471882a9-9b1b-4918-8943-6c66b60c94ea",
+        "disabled": false,
+        "settings": {}
       }
     },
     "color_schemes": {
