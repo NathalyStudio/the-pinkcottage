@@ -185,6 +185,22 @@
         "type": "shopify://apps/r-terms-conditions/blocks/embed-block/471882a9-9b1b-4918-8943-6c66b60c94ea",
         "disabled": false,
         "settings": {}
+      },
+      "1885603746734711653": {
+        "type": "shopify://apps/checkbox-assistant/blocks/app-embed-v2/9b7b4dde-58cf-4cb6-92f3-71004fe968bb",
+        "disabled": false,
+        "settings": {
+          "text-color": "",
+          "checkbox-color": "",
+          "font-size": 14,
+          "margin-top": 16,
+          "margin-bottom": 16,
+          "margin-left": 0,
+          "margin-right": 0,
+          "checkbox-spacing": 12,
+          "show-required-asterisk": true,
+          "required-asterisk-color": "#DC2626"
+        }
       }
     },
     "color_schemes": {
