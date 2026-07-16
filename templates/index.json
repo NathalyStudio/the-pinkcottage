@@ -160,9 +160,9 @@
       "name": "t:names.hero",
       "settings": {
         "media_type_1": "image",
-        "image_1": "shopify://shop_images/U26_D6_DC_WHSL_Sociall_Post_SaleGraphic1.jpg",
+        "image_1": "shopify://shop_images/U26_D6_CP_022268_46209_BELINDAMAXIDRESS_SUNSETORANGEBUDDINGROMANCE_0520_1.jpg",
         "media_type_2": "image",
-        "image_2": "shopify://shop_images/U26_D6_DC_WHSL_Socail_Post_SaleGraphic2.jpg",
+        "image_2": "shopify://shop_images/U26_D6_CP_022200_46209_JOELYDENIMSKIRT_ICEDLATTELILJIMSSTUFF_2125_1.jpg",
         "link": "",
         "open_in_new_tab": false,
         "content_direction": "column",
@@ -228,7 +228,7 @@
               "type": "_product-list-text",
               "name": "t:names.collection_title",
               "settings": {
-                "text": "<p>Lilly Summer Delivery 6</p>",
+                "text": "<p>Lilly Summer Delivery 4</p>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -377,7 +377,7 @@
       },
       "name": "t:names.products_carousel",
       "settings": {
-        "collection": "lilly-summer-delivery-6",
+        "collection": "lilly-summer-delivery-4",
         "layout_type": "carousel",
         "carousel_on_mobile": false,
         "max_products": 6,
